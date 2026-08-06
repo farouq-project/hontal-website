@@ -1,4 +1,3 @@
-import { Truck } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 
 export function Nav() {
@@ -6,9 +5,7 @@ export function Nav() {
     <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/70 border-b border-border/50">
       <nav className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 font-semibold tracking-tight">
-          <span className="grid place-items-center h-8 w-8 rounded-lg bg-gradient-primary shadow-glow">
-            <Truck className="h-4 w-4 text-primary-foreground" strokeWidth={2.5} />
-          </span>
+          <img src="/logo.png" alt="Hontal" className="h-8 w-8 rounded-lg object-contain" />
           <span className="text-foreground">
             Hontal
           </span>

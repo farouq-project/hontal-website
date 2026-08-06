@@ -41,7 +41,7 @@ function Page() {
             </div>
             <div>
               <div className="text-sm font-semibold">Email</div>
-              <a href="mailto:halo@operasi.id" className="mt-1 text-sm text-muted-foreground hover:text-primary">halo@operasi.id</a>
+              <a href="mailto:halo@hontal.id" className="mt-1 text-sm text-muted-foreground hover:text-primary">halo@hontal.id</a>
             </div>
           </div>
           <div className="flex items-start gap-4">
@@ -50,7 +50,14 @@ function Page() {
             </div>
             <div>
               <div className="text-sm font-semibold">WhatsApp</div>
-              <div className="mt-1 text-sm text-muted-foreground">Placeholder — akan diisi</div>
+              <a
+                href="https://wa.me/6285179584244?text=Halo%20Tim%20Hontal!%0A%0ASaya%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20Hontal%20Delivery.%0A%0ANama%20Bisnis%3A%20%0AJenis%20Produk%3A%20%0AKota%2FLokasi%3A%20%0ATarget%20Pasar%3A%20%0A%0ATerima%20kasih!"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-1 text-sm text-muted-foreground hover:text-primary"
+              >
+                +62 851-7958-4244
+              </a>
             </div>
           </div>
           <div className="flex items-start gap-4">
@@ -58,8 +65,8 @@ function Page() {
               <MapPin className="h-5 w-5" />
             </div>
             <div>
-              <div className="text-sm font-semibold">Location</div>
-              <div className="mt-1 text-sm text-muted-foreground">Indonesia</div>
+              <div className="text-sm font-semibold">Lokasi</div>
+              <div className="mt-1 text-sm text-muted-foreground">Indonesia — melayani seluruh wilayah</div>
             </div>
           </div>
         </div>
