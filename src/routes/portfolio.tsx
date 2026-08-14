@@ -18,30 +18,30 @@ const categories = [
   {
     name: "Retail & Distribution",
     projects: [
-      { n: "Kencana Lima", d: "ERP + inventory + delivery module." },
-      { n: "Origimilk", d: "Delivery management & driver tracking." },
+      { n: "Kencana Lima", d: "ERP + inventory + delivery module.", src: "/screenshots/portfolio/kencana-lima.png" },
+      { n: "Origimilk", d: "Delivery management & driver tracking.", src: "/screenshots/portfolio/origimilk.png" },
     ],
   },
   {
     name: "Research",
-    projects: [{ n: "UNPAD Agriculture", d: "Research data platform & dashboard." }],
+    projects: [{ n: "UNPAD Agriculture", d: "Research data platform & dashboard.", src: "/screenshots/portfolio/unpad-agriculture.png" }],
   },
   {
     name: "Audit",
-    projects: [{ n: "Southfield Consultant", d: "Audit workflow & approval flow." }],
+    projects: [{ n: "Southfield Consultant", d: "Audit workflow & approval flow.", src: "/screenshots/portfolio/southfield-consultant.png" }],
   },
   {
     name: "Agribusiness",
     projects: [
-      { n: "Subzero Meat Supply", d: "Receivable management & rekonsiliasi." },
-      { n: "Agro Mulia Lestari", d: "Corporate presence & positioning." },
+      { n: "Subzero Meat Supply", d: "Receivable management & rekonsiliasi.", src: "/screenshots/portfolio/subzero-meat-supply.png" },
+      { n: "Agro Mulia Lestari", d: "Corporate presence & positioning.", src: "/screenshots/portfolio/agro-mulia-lestari.png" },
     ],
   },
   {
     name: "Corporate Websites",
     projects: [
-      { n: "Harmoni Kreasi Sukses", d: "Corporate website." },
-      { n: "PT GAS", d: "Corporate website." },
+      { n: "Harmoni Kreasi Sukses", d: "Corporate website.", src: "/screenshots/portfolio/harmoni-kreasi-sukses.png" },
+      { n: "PT GAS", d: "Corporate website.", src: "/screenshots/portfolio/pt-gas.png" },
     ],
   },
 ];
@@ -63,7 +63,7 @@ function Page() {
             <div className="mt-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {c.projects.map((p) => (
                 <article key={p.n} className="rounded-2xl border border-border bg-gradient-card p-5 shadow-card">
-                  <Placeholder kind="screenshot" label={`${p.n} — Screenshot`} ratio="16/10" />
+                  <Placeholder kind="screenshot" label={`${p.n} — Screenshot`} ratio="16/10" src={p.src} />
                   <h3 className="mt-4 text-base font-semibold">{p.n}</h3>
                   <p className="mt-1 text-sm text-muted-foreground leading-relaxed">{p.d}</p>
                 </article>

@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Search, Mail, MailCheck, Target, LineChart, Sparkles, Users, Activity } from "lucide-react";
+import { ArrowRight, Search, Mail, MailCheck, Target, LineChart, Sparkles, Users, Activity, DatabaseZap } from "lucide-react";
 import { PageShell } from "@/components/site/PageShell";
 import { Placeholder } from "@/components/site/Placeholder";
 
@@ -7,9 +7,9 @@ export const Route = createFileRoute("/services/business-activation")({
   head: () => ({
     meta: [
       { title: "Business Activation — Operasi.id" },
-      { name: "description", content: "Managed service untuk mengubah website menjadi mesin peluang bisnis: review, optimasi, outreach, dan lead pipeline." },
+      { name: "description", content: "Managed service untuk mengubah website menjadi mesin peluang bisnis: review, optimasi, data scraping, email blasting, dan lead pipeline." },
       { property: "og:title", content: "Business Activation" },
-      { property: "og:description", content: "Website review, outreach, dan lead pipeline sebagai managed service." },
+      { property: "og:description", content: "Website review, data scraping, email blasting, dan lead pipeline sebagai managed service." },
     ],
   }),
   component: Page,
@@ -18,10 +18,10 @@ export const Route = createFileRoute("/services/business-activation")({
 const services = [
   { icon: Search, name: "Website Review" },
   { icon: Sparkles, name: "Website Optimization" },
-  { icon: Users, name: "Lead Collection" },
+  { icon: DatabaseZap, name: "Data Scraping" },
   { icon: Target, name: "Target Company Identification" },
   { icon: MailCheck, name: "Email Validation" },
-  { icon: Mail, name: "Email Outreach" },
+  { icon: Mail, name: "Email Blasting / Outreach" },
   { icon: Activity, name: "Campaign Tracking" },
   { icon: LineChart, name: "Traffic Monitoring" },
 ];
@@ -46,9 +46,9 @@ function Page() {
             <div className="text-[10px] uppercase tracking-wider text-primary">Expected Outcomes</div>
             <ul className="mt-3 space-y-2 text-sm text-foreground/85 leading-relaxed">
               <li>· Website teroptimasi untuk konversi</li>
-              <li>· Outreach terjadwal & terlacak</li>
+              <li>· Daftar target perusahaan hasil data scraping yang tervalidasi</li>
+              <li>· Email blasting terjadwal & terlacak, bounce rate terjaga rendah</li>
               <li>· CRM dashboard untuk pipeline peluang</li>
-              <li>· AI email recommendation untuk personalisasi</li>
             </ul>
           </div>
         </div>

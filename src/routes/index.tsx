@@ -1,38 +1,32 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight } from "lucide-react";
 import { Nav } from "@/components/site/Nav";
-import { Hero } from "@/components/site/Hero";
-import { Problems } from "@/components/site/Problems";
-import { Ownership } from "@/components/site/Ownership";
-import { ROI } from "@/components/site/ROI";
-import { Pillars } from "@/components/site/Products";
-import { Features } from "@/components/site/Solutions";
-import { Industries } from "@/components/site/Demos";
-import { CaseStudy } from "@/components/site/Portfolio";
-import { Pricing } from "@/components/site/Pricing";
-import { FAQ } from "@/components/site/FAQ";
-import { CTA } from "@/components/site/CTA";
+import { CompanyHero } from "@/components/site/CompanyHero";
+import { ProductsTeaser, ServicesTeaser } from "@/components/site/CompanyOfferings";
+import { HowWeHelp } from "@/components/site/HowWeHelp";
+import { WhyUs } from "@/components/site/WhyUs";
+import { CompanyCTA } from "@/components/site/CompanyCTA";
 import { Footer } from "@/components/site/Footer";
 import { WaButton } from "@/components/site/WaButton";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Hontal — Platform Operasional Pengiriman untuk Bisnis Distribusi" },
-      { name: "description", content: "Hontal membantu bisnis distribusi mengelola pengiriman, memahami pelanggan, dan mengukur pertumbuhan dalam satu platform." },
+      { title: "Operasi.id — Digital Transformation untuk Operasional Bisnis" },
+      { name: "description", content: "Produk, sistem custom, dan aktivasi bisnis untuk operasional yang lahir dari lapangan — bukan teori." },
       { name: "robots", content: "index, follow" },
-      { property: "og:title", content: "Hontal — Platform Operasional Pengiriman untuk Bisnis Distribusi" },
-      { property: "og:description", content: "Kelola pengiriman, pahami pelanggan, dan tumbuhkan bisnis distribusi Anda." },
+      { property: "og:title", content: "Operasi.id — Digital Transformation untuk Operasional Bisnis" },
+      { property: "og:description", content: "Produk, sistem custom, dan aktivasi bisnis untuk operasional bisnis Anda." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://hontal.id" },
       { property: "og:image", content: "https://hontal.id/og-image.png" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: "Hontal — Platform Operasional Pengiriman untuk Bisnis Distribusi" },
-      { property: "og:site_name", content: "Hontal" },
+      { property: "og:site_name", content: "Operasi.id" },
       { property: "og:locale", content: "id_ID" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Hontal — Platform Operasional Pengiriman untuk Bisnis Distribusi" },
-      { name: "twitter:description", content: "Kelola pengiriman, pahami pelanggan, dan tumbuhkan bisnis distribusi Anda." },
+      { name: "twitter:title", content: "Operasi.id — Digital Transformation untuk Operasional Bisnis" },
+      { name: "twitter:description", content: "Produk, sistem custom, dan aktivasi bisnis untuk operasional bisnis Anda." },
       { name: "twitter:image", content: "https://hontal.id/og-image.png" },
     ],
     links: [
@@ -45,22 +39,60 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
+const portfolioCategories = [
+  "Retail & Distribution", "Research", "Audit", "Agribusiness", "Corporate Websites",
+];
+
+function PortfolioTeaser() {
+  return (
+    <section className="relative py-24 border-y border-border/60" id="portfolio">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+          <div className="max-w-2xl">
+            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/60 px-3 py-1 text-xs text-primary">
+              <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+              Portfolio
+            </div>
+            <h2 className="mt-4 text-3xl sm:text-4xl font-semibold tracking-tight">
+              Project lintas sektor, dari lapangan yang sama
+            </h2>
+            <p className="mt-4 text-muted-foreground leading-relaxed">
+              Distribusi, riset, audit, agribisnis, hingga corporate website —
+              dibangun dengan pendekatan yang sama: memahami workflow dulu.
+            </p>
+          </div>
+          <Link
+            to="/portfolio"
+            className="inline-flex items-center gap-2 rounded-lg border border-border bg-surface/60 px-5 py-3 text-sm font-medium text-foreground hover:bg-surface transition shrink-0"
+          >
+            Lihat Semua Portfolio <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+
+        <div className="mt-10 flex flex-wrap gap-3">
+          {portfolioCategories.map((c) => (
+            <span key={c} className="text-sm rounded-full border border-border bg-gradient-card px-4 py-2 text-foreground/80">
+              {c}
+            </span>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Nav />
       <main>
-        <Hero />
-        <Problems />
-        <Ownership />
-        <ROI />
-        <Pillars />
-        <Features />
-        <Industries />
-        <CaseStudy />
-        <Pricing />
-        <FAQ />
-        <CTA />
+        <CompanyHero />
+        <ProductsTeaser />
+        <ServicesTeaser />
+        <HowWeHelp />
+        <PortfolioTeaser />
+        <WhyUs />
+        <CompanyCTA />
       </main>
       <Footer />
       <WaButton />

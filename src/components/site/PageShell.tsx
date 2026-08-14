@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { Nav } from "./Nav";
 import { Footer } from "./Footer";
-import { CTA } from "./CTA";
+import { CompanyCTA } from "./CompanyCTA";
 import { WaButton } from "./WaButton";
 
 export function PageShell({
@@ -44,7 +44,7 @@ export function PageShell({
 
         {children}
 
-        {showCTA && <CTA />}
+        {showCTA && <CompanyCTA />}
       </main>
       <Footer />
       <WaButton />

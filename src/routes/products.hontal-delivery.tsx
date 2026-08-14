@@ -1,78 +1,69 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
-import { PageShell } from "@/components/site/PageShell";
-import { Placeholder } from "@/components/site/Placeholder";
+import { createFileRoute } from "@tanstack/react-router";
+import { Nav } from "@/components/site/Nav";
+import { Hero } from "@/components/site/Hero";
+import { Problems } from "@/components/site/Problems";
+import { Ownership } from "@/components/site/Ownership";
+import { ROI } from "@/components/site/ROI";
+import { Pillars } from "@/components/site/Products";
+import { Features } from "@/components/site/Solutions";
+import { Industries } from "@/components/site/Demos";
+import { CaseStudy } from "@/components/site/Portfolio";
+import { Pricing } from "@/components/site/Pricing";
+import { FAQ } from "@/components/site/FAQ";
+import { CTA } from "@/components/site/CTA";
+import { Footer } from "@/components/site/Footer";
+import { WaButton } from "@/components/site/WaButton";
 
 export const Route = createFileRoute("/products/hontal-delivery")({
   head: () => ({
     meta: [
-      { title: "Hontal Delivery — Cloud Delivery Platform for SMEs" },
-      { name: "description", content: "Platform delivery untuk UMKM. Gunakan driver sendiri, miliki database pelanggan, kurangi ketergantungan marketplace." },
-      { property: "og:title", content: "Hontal Delivery — Cloud Delivery Platform" },
-      { property: "og:description", content: "Order, dispatch, driver tracking, dan analytics penjualan dalam satu platform." },
+      { title: "Hontal — Platform Operasional Pengiriman untuk Bisnis Distribusi" },
+      { name: "description", content: "Hontal membantu bisnis distribusi mengelola pengiriman, memahami pelanggan, dan mengukur pertumbuhan dalam satu platform." },
+      { name: "robots", content: "index, follow" },
+      { property: "og:title", content: "Hontal — Platform Operasional Pengiriman untuk Bisnis Distribusi" },
+      { property: "og:description", content: "Kelola pengiriman, pahami pelanggan, dan tumbuhkan bisnis distribusi Anda." },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://hontal.id/products/hontal-delivery" },
+      { property: "og:image", content: "https://hontal.id/og-image.png" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Hontal — Platform Operasional Pengiriman untuk Bisnis Distribusi" },
+      { property: "og:site_name", content: "Hontal by Operasi.id" },
+      { property: "og:locale", content: "id_ID" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Hontal — Platform Operasional Pengiriman untuk Bisnis Distribusi" },
+      { name: "twitter:description", content: "Kelola pengiriman, pahami pelanggan, dan tumbuhkan bisnis distribusi Anda." },
+      { name: "twitter:image", content: "https://hontal.id/og-image.png" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://hontal.id/products/hontal-delivery" },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" },
     ],
   }),
   component: HontalPage,
 });
 
-const modules = [
-  "Order Management", "Dispatch Board", "Auto Routing", "Driver Assignment",
-  "Driver Tracking", "Customer Database", "Delivery History", "Cashier Integration",
-  "QRIS Receipt", "Bluetooth Printing", "Sales Dashboard", "Customer Mapping",
-  "Reporting", "Live GPS Monitoring",
-];
-
-const outcomes = [
-  "Miliki database pelanggan sendiri",
-  "Kurangi waktu koordinasi driver",
-  "Pantau operasional secara real-time",
-  "Kurangi ketergantungan pada marketplace",
-];
-
 function HontalPage() {
   return (
-    <PageShell
-      eyebrow="Flagship Product"
-      title="Hontal Delivery — platform delivery yang bisnis Anda miliki"
-      description="Subscription-based cloud platform untuk UMKM yang menjalankan pengiriman dengan driver mereka sendiri."
-    >
-      <section className="mx-auto max-w-7xl px-6 py-16 space-y-10">
-        <Placeholder kind="screenshot" label="Hontal Delivery — Dashboard Preview" ratio="16/9" src="/screenshots/hero-dashboard.png" />
-
-        <div className="grid lg:grid-cols-2 gap-6">
-          <div className="rounded-2xl border border-border bg-gradient-card p-8">
-            <div className="text-[10px] uppercase tracking-wider text-primary">Business Outcomes</div>
-            <ul className="mt-4 space-y-3">
-              {outcomes.map((o) => (
-                <li key={o} className="flex items-start gap-3 text-sm">
-                  <CheckCircle2 className="h-4 w-4 text-success mt-0.5 shrink-0" />
-                  {o}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="rounded-2xl border border-border bg-gradient-card p-8">
-            <div className="text-[10px] uppercase tracking-wider text-primary">Modules</div>
-            <div className="mt-4 flex flex-wrap gap-2">
-              {modules.map((m) => (
-                <span key={m} className="text-xs rounded-full border border-border bg-surface px-3 py-1 text-foreground/80">{m}</span>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          <Placeholder kind="screenshot" label="Dispatch Board" ratio="4/3" src="/screenshots/dispatch.png" />
-          <Placeholder kind="screenshot" label="Live GPS Tracking" ratio="4/3" src="/screenshots/driver-live-tracking.png" />
-          <Placeholder kind="screenshot" label="Sales Analytics" ratio="4/3" src="/screenshots/sales_bi_feature.png" />
-        </div>
-
-        <div className="text-center">
-          <Link to="/demo" className="inline-flex items-center gap-2 rounded-lg bg-gradient-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-glow hover:opacity-90 transition">
-            Request Product Demo <ArrowRight className="h-4 w-4" />
-          </Link>
-        </div>
-      </section>
-    </PageShell>
+    <div className="min-h-screen bg-background text-foreground">
+      <Nav />
+      <main>
+        <Hero />
+        <Problems />
+        <Ownership />
+        <ROI />
+        <Pillars />
+        <Features />
+        <Industries />
+        <CaseStudy />
+        <Pricing />
+        <FAQ />
+        <CTA />
+      </main>
+      <Footer />
+      <WaButton />
+    </div>
   );
 }

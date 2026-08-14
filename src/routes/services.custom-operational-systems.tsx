@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Boxes, ClipboardCheck, Database, FlaskConical, LineChart, Users, Wallet, Workflow } from "lucide-react";
+import { ArrowRight, Boxes, ClipboardCheck, Database, FlaskConical, Globe, LineChart, Users, Wallet, Workflow } from "lucide-react";
 import { PageShell } from "@/components/site/PageShell";
 import { Placeholder } from "@/components/site/Placeholder";
 
@@ -24,6 +24,7 @@ const systems = [
   { icon: Workflow, name: "Workflow Automation" },
   { icon: LineChart, name: "Business Dashboard" },
   { icon: Database, name: "Data Consolidation" },
+  { icon: Globe, name: "Custom Website" },
 ];
 
 function Page() {
@@ -39,7 +40,8 @@ function Page() {
             <div className="text-[10px] uppercase tracking-wider text-muted-foreground">Who is it for?</div>
             <p className="mt-3 text-foreground/85 leading-relaxed">
               Distributor, supplier, agribisnis, konsultan, dan lembaga riset yang membutuhkan
-              sistem sesuai workflow spesifik mereka.
+              sistem sesuai workflow spesifik mereka — termasuk website perusahaan yang butuh
+              lebih dari sekadar template.
             </p>
           </div>
           <div className="rounded-2xl border border-border bg-gradient-card p-8">

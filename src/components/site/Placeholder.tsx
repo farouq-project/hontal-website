@@ -39,7 +39,7 @@ export function Placeholder({
   const [imgError, setImgError] = useState(false);
   const Icon = ICONS[kind];
 
-  const V = "20260807e";
+  const V = "20260814a";
   const resolvedSrc = src?.startsWith("/screenshots/") ? `${src}?v=${V}` : src;
 
   if (resolvedSrc && !imgError) {

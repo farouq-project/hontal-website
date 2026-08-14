@@ -3,11 +3,11 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 
 const NAV_ITEMS: [string, string][] = [
-  ["/", "Beranda"],
-  ["/#features", "Fitur"],
-  ["/#industries", "Industri"],
-  ["/#pricing", "Harga"],
-  ["/demo", "Demo"],
+  ["/products", "Products"],
+  ["/services", "Services"],
+  ["/portfolio", "Portfolio"],
+  ["/about", "About"],
+  ["/contact", "Contact"],
 ];
 
 export function Nav() {
@@ -17,16 +17,16 @@ export function Nav() {
     <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/70 border-b border-border/50">
       <nav className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 font-semibold tracking-tight">
-          <img src="/logo.png" alt="Hontal" className="h-8 w-8 rounded-lg object-contain" />
-          <span className="text-foreground">Hontal</span>
+          <img src="/logo.png" alt="Operasi.id" className="h-8 w-8 rounded-lg object-contain" />
+          <span className="text-foreground">Operasi<span className="text-primary">.id</span></span>
         </Link>
 
         {/* Desktop nav */}
         <div className="hidden lg:flex items-center gap-1 text-sm text-muted-foreground">
           {NAV_ITEMS.map(([to, label]) => (
-            <a key={to} href={to} className="px-3 py-2 rounded-md hover:text-foreground transition-colors">
+            <Link key={to} to={to} className="px-3 py-2 rounded-md hover:text-foreground transition-colors">
               {label}
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -35,13 +35,13 @@ export function Nav() {
             href="https://app.hontal.id/login"
             className="hidden lg:inline text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
-            Masuk
+            Masuk ke Hontal
           </a>
           <Link
-            to="/demo"
+            to="/contact"
             className="hidden sm:inline text-sm px-4 py-2 rounded-lg bg-gradient-primary text-primary-foreground font-medium shadow-glow hover:opacity-90 transition"
           >
-            Jadwalkan Demo
+            Book Discussion
           </Link>
           {/* Hamburger — mobile only */}
           <button
@@ -59,28 +59,28 @@ export function Nav() {
         <div className="lg:hidden border-t border-border/50 bg-background/95 backdrop-blur-xl">
           <div className="mx-auto max-w-7xl px-6 py-4 flex flex-col gap-1">
             {NAV_ITEMS.map(([to, label]) => (
-              <a
+              <Link
                 key={to}
-                href={to}
+                to={to}
                 onClick={() => setOpen(false)}
                 className="px-3 py-2.5 rounded-md text-sm hover:text-foreground hover:bg-surface/60 transition-colors"
               >
                 {label}
-              </a>
+              </Link>
             ))}
             <div className="mt-3 pt-3 border-t border-border/50 flex flex-col gap-2">
               <a
                 href="https://app.hontal.id/login"
                 className="px-3 py-2.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
-                Masuk
+                Masuk ke Hontal
               </a>
               <Link
-                to="/demo"
+                to="/contact"
                 onClick={() => setOpen(false)}
                 className="text-sm px-4 py-2.5 rounded-lg bg-gradient-primary text-primary-foreground font-medium text-center hover:opacity-90 transition"
               >
-                Jadwalkan Demo
+                Book Discussion
               </Link>
             </div>
           </div>

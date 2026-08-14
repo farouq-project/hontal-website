@@ -1,5 +1,4 @@
-import { Truck } from "lucide-react";
-import { Link } from "@tanstack/react-router";
+import { Layers } from "lucide-react";
 
 export function Footer() {
   return (
@@ -8,13 +7,13 @@ export function Footer() {
         <div className="md:col-span-2">
           <div className="flex items-center gap-2 font-semibold">
             <span className="grid place-items-center h-8 w-8 rounded-lg bg-gradient-primary">
-              <Truck className="h-4 w-4 text-primary-foreground" strokeWidth={2.5} />
+              <Layers className="h-4 w-4 text-primary-foreground" strokeWidth={2.5} />
             </span>
-            <span>Hontal</span>
+            <span>Operasi<span className="text-primary">.id</span></span>
           </div>
           <p className="mt-4 text-sm text-muted-foreground max-w-sm leading-relaxed">
-            Platform operasional pengiriman untuk bisnis distribusi Indonesia.
-            Kelola order, driver, pelanggan, dan pertumbuhan dalam satu dashboard.
+            Produk, sistem custom, dan aktivasi bisnis untuk operasional yang lahir
+            dari lapangan — bukan teori.
           </p>
           <p className="mt-4 text-xs text-muted-foreground">
             Digunakan dalam operasional nyata.
@@ -22,27 +21,27 @@ export function Footer() {
         </div>
 
         <FooterCol
-          title="Produk"
+          title="Perusahaan"
           items={[
-            ["/#features", "Fitur"],
-            ["/#pricing", "Harga"],
-            ["/demo", "Book Demo"],
-            ["https://app.hontal.id", "Masuk"],
+            ["/products", "Products"],
+            ["/services", "Services"],
+            ["/portfolio", "Portfolio"],
+            ["/about", "About"],
           ]}
         />
         <FooterCol
-          title="Informasi"
+          title="Hontal Delivery"
           items={[
-            ["/#industries", "Industri"],
-            ["/#case-study", "Studi Kasus"],
-            ["/#faq", "FAQ"],
-            ["/demo", "Jadwalkan Demo"],
+            ["/products/hontal-delivery", "Fitur Hontal"],
+            ["/demo", "Book Demo"],
+            ["https://app.hontal.id", "Masuk ke Hontal"],
+            ["/contact", "Contact"],
           ]}
         />
       </div>
       <div className="border-t border-border">
         <div className="mx-auto max-w-7xl px-6 py-5 text-xs text-muted-foreground flex flex-col sm:flex-row justify-between gap-2">
-          <span>© {new Date().getFullYear()} Hontal — Platform operasional pengiriman untuk bisnis distribusi.</span>
+          <span>© {new Date().getFullYear()} Operasi.id — Digital transformation untuk operasional bisnis.</span>
           <span>Made in Indonesia 🇮🇩</span>
         </div>
       </div>
@@ -57,11 +56,7 @@ function FooterCol({ title, items }: { title: string; items: [string, string][] 
       <ul className="mt-3 space-y-2 text-sm">
         {items.map(([to, label]) => (
           <li key={to}>
-            {to.startsWith("http") ? (
-              <a href={to} className="hover:text-primary transition-colors">{label}</a>
-            ) : (
-              <a href={to} className="hover:text-primary transition-colors">{label}</a>
-            )}
+            <a href={to} className="hover:text-primary transition-colors">{label}</a>
           </li>
         ))}
       </ul>
