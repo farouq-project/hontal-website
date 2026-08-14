@@ -62,9 +62,9 @@ function HontalPage() {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          <Placeholder kind="screenshot" label="Dispatch Board" ratio="4/3" src="/screenshots/dispatch-board.png" />
+          <Placeholder kind="screenshot" label="Dispatch Board" ratio="4/3" src="/screenshots/dispatch.png" />
           <Placeholder kind="screenshot" label="Live GPS Tracking" ratio="4/3" src="/screenshots/driver-live-tracking.png" />
-          <Placeholder kind="screenshot" label="Sales Analytics" ratio="4/3" src="/screenshots/bi-sales.png" />
+          <Placeholder kind="screenshot" label="Sales Analytics" ratio="4/3" src="/screenshots/sales_bi_feature.png" />
         </div>
 
         <div className="text-center">

@@ -82,9 +82,9 @@ export function Hero() {
 
         <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
-            { l: "Dispatch Board", src: "/screenshots/dispatch-board.png" },
+            { l: "Dispatch Board", src: "/screenshots/dispatch.png" },
             { l: "Live Tracking Driver", src: "/screenshots/driver-live-tracking.png" },
-            { l: "Customer Intelligence", src: "/screenshots/customer-intelligence.png" },
+            { l: "Customer Intelligence", src: "/screenshots/customer_bi.png" },
             { l: "Business Health Score", src: "/screenshots/business-health-score.png" },
           ].map((s) => (
             <Placeholder key={s.l} kind="screenshot" label={s.l} ratio="16/10" src={s.src} />

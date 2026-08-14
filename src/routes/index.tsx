@@ -12,6 +12,7 @@ import { Pricing } from "@/components/site/Pricing";
 import { FAQ } from "@/components/site/FAQ";
 import { CTA } from "@/components/site/CTA";
 import { Footer } from "@/components/site/Footer";
+import { WaButton } from "@/components/site/WaButton";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -62,6 +63,7 @@ function Index() {
         <CTA />
       </main>
       <Footer />
+      <WaButton />
     </div>
   );
 }

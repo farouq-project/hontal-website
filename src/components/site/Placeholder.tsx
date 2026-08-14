@@ -39,16 +39,19 @@ export function Placeholder({
   const [imgError, setImgError] = useState(false);
   const Icon = ICONS[kind];
 
-  if (src && !imgError) {
+  const V = "20260807e";
+  const resolvedSrc = src?.startsWith("/screenshots/") ? `${src}?v=${V}` : src;
+
+  if (resolvedSrc && !imgError) {
     return (
       <div
         className={`relative w-full overflow-hidden rounded-2xl border border-border/40 shadow-card ${className}`}
         style={{ aspectRatio: ratio }}
       >
         <img
-          src={src}
+          src={resolvedSrc}
           alt={label ?? LABELS[kind]}
-          className="w-full h-full object-cover object-top"
+          className="w-full h-full object-cover object-left-top"
           onError={() => setImgError(true)}
         />
       </div>

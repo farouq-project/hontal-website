@@ -15,7 +15,7 @@ const features = [
       "Status setiap order langsung diperbarui",
     ],
     screenshot: "Dispatch Board — Order & Driver Management",
-    src: "/screenshots/dispatch-board.png",
+    src: "/screenshots/dispatch.png",
     reverse: false,
   },
   {
@@ -30,7 +30,7 @@ const features = [
       "Notifikasi ketika pelanggan mulai tidak aktif",
     ],
     screenshot: "Customer Intelligence — Segmentation Dashboard",
-    src: "/screenshots/customer-intelligence.png",
+    src: "/screenshots/customer_bi.png",
     reverse: true,
   },
   {

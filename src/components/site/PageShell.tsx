@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { Nav } from "./Nav";
 import { Footer } from "./Footer";
 import { CTA } from "./CTA";
+import { WaButton } from "./WaButton";
 
 export function PageShell({
   eyebrow,
@@ -46,6 +47,7 @@ export function PageShell({
         {showCTA && <CTA />}
       </main>
       <Footer />
+      <WaButton />
     </div>
   );
 }

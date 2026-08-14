@@ -83,9 +83,9 @@ export function CaseStudy() {
 
             {/* Screenshot side */}
             <div className="relative bg-surface/40 p-6 lg:p-10 border-t lg:border-t-0 lg:border-l border-border/60 flex flex-col gap-4">
-              <Placeholder kind="screenshot" label="Kencana Lima — Dispatch Board" ratio="16/10" src="/screenshots/dispatch-board.png" />
+              <Placeholder kind="screenshot" label="Kencana Lima — Dispatch Board" ratio="16/10" src="/screenshots/dispatch.png" />
               <div className="grid grid-cols-2 gap-4">
-                <Placeholder kind="screenshot" label="Customer Intelligence" ratio="4/3" src="/screenshots/customer-intelligence.png" />
+                <Placeholder kind="screenshot" label="Customer Intelligence" ratio="4/3" src="/screenshots/customer_bi.png" />
                 <Placeholder kind="screenshot" label="Business Health Score" ratio="4/3" src="/screenshots/business-health-score.png" />
               </div>
             </div>
